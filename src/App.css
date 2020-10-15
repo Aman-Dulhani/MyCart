@@ -28,6 +28,28 @@
   padding: 10px;
 }
 
+.add {
+  display: flex;
+  flex-direction: row;
+  padding: auto;
+}
+
+.add button{
+  margin-right: 0px;
+  margin-left: auto;
+  background-color: yellow;
+  color: black;
+  height: 30px;
+  width: max-content;
+  font-size: small;
+  margin-top: 10px;
+}
+
+.card-title:hover{ 
+  color: orange;
+  cursor: pointer;
+}
+
 .card-content{
   padding: 10px;
 }
@@ -36,4 +58,38 @@
   height: 299px;
   width: 299px;
   padding: 10px;
+}
+
+.cart{
+  margin-top: 30px;
+}
+
+.collection-item {
+  position: relative;
+  display: flex;
+  flex: wrap;
+  height: 180px;
+  width: 700px;
+  flex-direction: row;
+  margin: 10px auto 10px auto;
+  border:1px solid lightgray;
+  padding: 10px;
+}
+
+.collection-item p{
+  margin-top: 10px;
+}
+
+.collection-item img{
+  height: 150px;
+  width: 200px;
+}
+
+#del-button{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  background-color: white;
+  border: 0px solid;
+
 }

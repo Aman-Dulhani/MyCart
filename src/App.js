@@ -7,6 +7,7 @@ import Navigation from './Components/Navigation';
 import Home from './Components/Home'
 import Cart from './Components/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductDetails from './Components/ProductDetails'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Switch>
             <Route exact path='/' component={ Home } />
             <Route path='/cart' component={ Cart } />
+            <Route path='/details' component={ ProductDetails } />
           </Switch>
         </Router>
       </div>
