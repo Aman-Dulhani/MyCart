@@ -5,37 +5,54 @@
             "title":"Winer body", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
             "price":110,
-            "img": ["https://image.shutterstock.com/image-photo/black-tshirt-front-view-isolated-600w-1703432920.jpg"]},
+            "img": ["https://image.shutterstock.com/image-photo/black-tshirt-front-view-isolated-600w-1703432920.jpg"],
+            "category": "Winter",
+            "Net_quantity": 20    
+        },
         {
             "id":2,
             "title":"Addias", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
             "price":80,
-            "img": ["https://image.shutterstock.com/image-vector/california-ocean-side-stylish-tshirt-600w-1180194466.jpg"]},
+            "img": ["https://image.shutterstock.com/image-vector/california-ocean-side-stylish-tshirt-600w-1180194466.jpg"],
+            "category": "Summer",
+            "Net_quantity": 20
+        },
         {
             "id":3,
             "title":"Vans", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
             "price":120, 
-            "img": ["https://image.shutterstock.com/image-photo/black-plain-shortsleeve-cotton-tshirt-600w-1078474880.jpg"]},
+            "img": ["https://image.shutterstock.com/image-photo/black-plain-shortsleeve-cotton-tshirt-600w-1078474880.jpg"],
+            "category": "Spring",
+            "Net_quantity": 20
+        },
         {
             "id":4,
-            "title":
-            "White", 
+            "title":"White", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
             "price":260, 
-            "img": ["https://image.shutterstock.com/image-photo/pastel-pink-plain-shortsleeve-cotton-260nw-1709979847.jpg"]},
+            "img": ["https://image.shutterstock.com/image-photo/pastel-pink-plain-shortsleeve-cotton-260nw-1709979847.jpg"],
+            "category": "Winter",
+            "Net_quantity":20
+        },
         {
             "id":5,
             "title":"Croped-sho", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", 
             "price":160, 
-            "img": ["https://image.shutterstock.com/image-photo/red-plain-shortsleeve-cotton-tshirt-600w-1699555501.jpg"]},
+            "img": ["https://image.shutterstock.com/image-photo/red-plain-shortsleeve-cotton-tshirt-600w-1699555501.jpg"],
+            "category": "Summer",
+            "Net_quantity":5
+        },
         {
             "id":6,
             "title":"Blue", 
             "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
             "price":90, 
-            "img": ["https://image.shutterstock.com/image-photo/azure-plain-shortsleeve-cotton-tshirt-260nw-1078394564.jpg"]}
+            "img": ["https://image.shutterstock.com/image-photo/azure-plain-shortsleeve-cotton-tshirt-260nw-1078394564.jpg"],
+            "category": "Spring",
+            "Net_quantity": 2
+        }
     ]
 }
