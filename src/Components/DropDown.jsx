@@ -15,7 +15,7 @@ const DropDown = (props) => {
 
     return (
         <form >
-            <select value={header} onChange={handleClick}>
+            <select value={header} onChange={handleClick} className='dropdown'>
                 {
                     list.length > 0 ? (
                         list.map(item => {

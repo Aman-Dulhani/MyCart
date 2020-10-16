@@ -4,6 +4,7 @@ export const DEL_FROM_CART = 'DEL_FROM_CART'
 export const DEC_QUA = 'DEC_QUA'
 export const ASC_QUA = 'ASC_QUA'
 export const SHOW_SELECTED = 'SHOW_SELECTED'
+export const SEARCH = 'SEARCH'
 
 export const addToCart = (id)=>{
     return{
@@ -25,4 +26,8 @@ export const ascQua = (id) => {
 
 export const showSelected = (category) => {
     return { type: SHOW_SELECTED, category }
+}
+
+export const search = (text='') => {
+    return { type: SEARCH, text}
 }

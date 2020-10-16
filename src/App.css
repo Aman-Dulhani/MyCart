@@ -1,6 +1,7 @@
 .box{
   display: flex;
   width: auto;
+  font-family: Trebuchet MS, sans-serif;
 }
 
 .container{
@@ -11,6 +12,7 @@
   top: 80px;
   padding-right: 40px;
   padding-left: 40px;
+  font-family: inherit;
 }
 
 .navbar{
@@ -24,17 +26,20 @@
   height: 40px;
   text-align: center;
   z-index: 1;
+  font-family: inherit;
 }
 
 .nav-left{
   padding: 5px 5px 5px 5px;
   font-size: large;
+  cursor: pointer;
 }
 
 .nav-right{
   padding: 5px 5px 5px 5px;
   font-size: large;
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .card{
@@ -43,6 +48,7 @@
   margin: 10px;
   border: 1px solid gray;
   width: 340px;
+  box-shadow: 5px 5px lightgrey;
 }
 .card-title {
   color: black;
@@ -59,12 +65,15 @@
 }
 
 .add button{
-  background-color: yellow;
+  background-color:  rgba(238, 223, 93, 0.87);
   color: black;
   height: 30px;
   width: max-content;
   font-size: small;
   margin-top: 30px;
+  font-family: inherit;
+  border: 1px solid grey;
+  cursor: pointer;
 }
 
 .card-title:hover{ 
@@ -82,9 +91,22 @@
   padding: 10px;
 }
 
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.inputBar{
+  height: 40px;
+  width: 200px;
+  margin-left: 0px;
+}
+
 .cart{
   margin-left:auto;
   margin-right: auto;
+  margin-top: 80px;
 }
 
 .collection-item {
@@ -107,10 +129,31 @@
   width: 200px;
 }
 
-#del-button{
-  position: absolute;
-  right: 10px;
-  top: 13px;
-  background-color: white;
-  border: 0px solid;
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#checkout{
+  height: 50px;
+  width: 720px;
+  background-color: #87e1ec;
+}
+
+.search{
+  border-radius: 8px 8px;
+  height: 23px;
+  border: 0px;
+  width: 220px;
+}
+
+.search::selection{
+  border: 0px;
+}
+
+select{
+  height: 25px;
+  border-radius: 8px 8px;
+  border: 0px;
 }
