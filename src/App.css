@@ -76,6 +76,11 @@
   cursor: pointer;
 }
 
+.added-item{
+  margin-top: 33px;
+}
+
+
 .card-title:hover{ 
   color: orange;
   cursor: pointer;
@@ -139,6 +144,8 @@
   height: 50px;
   width: 720px;
   background-color: #87e1ec;
+  border: 1px solid grey;
+  border-radius: 15px 15px;
 }
 
 .search{

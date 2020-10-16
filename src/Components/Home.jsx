@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemList from './ItemList'
+import ItemCard from './ItemCard'
 import { connect } from 'react-redux'
 
 
@@ -10,7 +10,7 @@ const Home = (props) => {
             { items.length > 0 ? (
                 items.map(item => {
                     return(
-                        <ItemList item={item} />
+                        <ItemCard item={item} />
                     )
                 }) 
             ): (' ')}

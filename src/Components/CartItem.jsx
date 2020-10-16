@@ -1,12 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash,faPlusCircle,faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux'
-import { delFromCart, decQua,ascQua } from '../actions/cartActions'
+import { delFromCart } from '../actions/cartActions'
+import Quantity from './Quantity'
 
 const CartItem = (props) => {
     const item = props.item
-    const { delFrom, dec, addTo } = props
+    const { delFrom } = props
     return (
             <div className="collection-item avatar" key={item.id}>
                 <div className="item-img"> 
@@ -22,12 +23,7 @@ const CartItem = (props) => {
                     <br/>
                     <p>{item.desc}</p>
                     <p><b>Price: {item.price}$</b></p> 
-                    <b>Quantity:</b> <span><i onClick={() => dec(item.id)}>
-                        <FontAwesomeIcon icon={faMinusCircle} /></i></span> 
-                    <b>{item.quantity}</b>
-                    <span><i onClick={() => addTo(item.id)}>
-                        <FontAwesomeIcon icon={faPlusCircle} /></i>
-                    </span> 
+                    <b>Quantity:</b> <Quantity quantity={item.quantity} id={item.id} />
                 </div>
             </div>
     )
@@ -36,8 +32,6 @@ const CartItem = (props) => {
 const mapDisptachToProps = (dispatch) => {
     return {
         delFrom: id => {dispatch(delFromCart(id))},
-        dec: id => {dispatch(decQua(id))},
-        addTo: id => {dispatch(ascQua(id))}
     }
 }
 

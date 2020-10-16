@@ -1,5 +1,11 @@
 import data from '../data/data.json'
-import { ADD_TO_CART, DEL_FROM_CART, DEC_QUA, ASC_QUA, SHOW_SELECTED, SEARCH } from '../actions/cartActions'
+import { 
+        ADD_TO_CART, 
+        DEL_FROM_CART, 
+        DEC_QUA, 
+        ASC_QUA, 
+        SHOW_SELECTED, 
+        SEARCH } from '../actions/cartActions'
 
 const initState = {
     visibleItems: data.items,
@@ -13,32 +19,14 @@ export const cartReducer = (state = initState,action)=>{
     switch (action.type){
         case ADD_TO_CART:
             let addedItem = state.visibleItems.findIndex(item=> item.id === action.id)
-          //check if the action id exists in the addedItems
-            let existed_item= state.addedItems.findIndex(item=> action.id === item.id)
-            if(existed_item>=0)
-            {
-                let addItem = state.addedItems[existed_item]
-                let qua_addItem = addItem.quantity
-                let newAddItem = {...addItem, quantity: qua_addItem+1}
-                return Object.assign({}, state, {
-                    addedItems: [
-                        ...state.addedItems.slice(0,existed_item),
-                        newAddItem,
-                        ...state.addedItems.slice(existed_item+1)
-                    ],
-                    total: state.total+addItem.price
-                })
-            }
-            else{
-                let addItem = state.visibleItems[addedItem]
-                let newAddItem = {...addItem, quantity: 1}
-                return Object.assign({}, state, {
-                    addedItems: [
-                        ...state.addedItems, newAddItem
-                    ],
-                    total: state.total+addItem.price
-                })
-            }
+            let addItem = state.visibleItems[addedItem]
+            let newAddItem = {...addItem, quantity: 1}
+            return Object.assign({}, state, {
+                addedItems: [
+                    ...state.addedItems, newAddItem
+                ],
+                total: state.total+addItem.price
+            })
 
         case DEL_FROM_CART:
             let delItem = state.addedItems.find(item => item.id===action.id)
