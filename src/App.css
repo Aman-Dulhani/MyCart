@@ -1,26 +1,48 @@
+.box{
+  display: flex;
+  width: auto;
+}
+
 .container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: absolute;
+  top: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .navbar{
   position: fixed;
-  height: 50px;
-  background-color: orangered;
+  display: flex;
+  justify-content: space-between;
+  background-color:#111;
   color: white;
   width: 100%;
+  padding: 16px;  
+  height: 40px;
+  text-align: center;
+  z-index: 1;
 }
 
-.navabar h2{
-  color: white;
+.nav-left{
+  padding: 5px 5px 5px 5px;
+  font-size: large;
+}
+
+.nav-right{
+  padding: 5px 5px 5px 5px;
+  font-size: large;
+  margin-right: 30px;
 }
 
 .card{
   width: 300px;
   margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 10px;
+  border: 1px solid gray;
+  width: 340px;
 }
 .card-title {
   color: black;
@@ -32,17 +54,17 @@
   display: flex;
   flex-direction: row;
   padding: auto;
+  justify-content: space-between;
+  height: 70px;
 }
 
 .add button{
-  margin-right: 0px;
-  margin-left: auto;
   background-color: yellow;
   color: black;
   height: 30px;
   width: max-content;
   font-size: small;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .card-title:hover{ 
@@ -56,16 +78,16 @@
 
 .card img{
   height: 299px;
-  width: 299px;
+  width: 310px;
   padding: 10px;
 }
 
 .cart{
-  margin-top: 30px;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 .collection-item {
-  position: relative;
   display: flex;
   flex: wrap;
   height: 180px;
@@ -91,5 +113,4 @@
   top: 13px;
   background-color: white;
   border: 0px solid;
-
 }

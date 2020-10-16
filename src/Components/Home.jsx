@@ -1,11 +1,10 @@
 import React from 'react'
 import ItemList from './ItemList'
-import data from '../data/data.json';
+import { connect } from 'react-redux'
 
 
-
-const Home = () => {
-    const items = data.items
+const Home = (props) => {
+    const { items } = props
     return (
         <div className='container'>
             { items.length > 0 ? (
@@ -19,5 +18,11 @@ const Home = () => {
     )
 }
 
+const mapStateToProps = (state) => {
+    return{
+        items: state.visibleItems
+    }
+}
 
-export default Home
+
+export default connect(mapStateToProps)(Home)

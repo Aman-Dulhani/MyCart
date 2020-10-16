@@ -1,10 +1,11 @@
 import data from '../data/data.json'
-import { ADD_TO_CART, DEL_FROM_CART, DEC_QUA, ASC_QUA } from '../actions/cartActions'
+import { ADD_TO_CART, DEL_FROM_CART, DEC_QUA, ASC_QUA, SHOW_SELECTED } from '../actions/cartActions'
 
 const initState = {
     visibleItems: data.items,
     addedItems:[],
-    total: 0
+    total: 0,
+    visibleCategory: data.categories,
 }
 
 export const cartReducer = (state = initState,action)=>{
@@ -79,7 +80,16 @@ export const cartReducer = (state = initState,action)=>{
                     ...state.addedItems.slice(inc_idx+1)
                 ]
             })
-
+        case SHOW_SELECTED:
+            let newVisibleItems;
+            if (action.category==='All'){
+                newVisibleItems = data.items
+            }else{
+                newVisibleItems = data.items.filter(t => t.category===action.category)
+            }
+            return Object.assign({}, state, {
+                visibleItems: newVisibleItems
+            })
         default:
             return state
     }

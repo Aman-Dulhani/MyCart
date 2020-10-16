@@ -54,5 +54,11 @@
             "category": "Spring",
             "Net_quantity": 2
         }
+    ],
+    "categories": [
+        { "id": 0, "category": "All", "selected": "true"},
+        { "id": 1, "category": "Spring", "selected": "False"},
+        { "id": 2, "category": "Summer", "selected": "False"},
+        { "id": 3, "category": "Winter", "selected": "False"}
     ]
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import DropDown from './DropDown'
 
 const Navigation = () => {
     return (
         <div className='navbar'>
-            <h2><Link to='/'>Shop</Link></h2>
-            <h2><Link to='/cart'>Cart</Link></h2>
+            <div className='nav-left'><Link to='/'>Shop</Link></div>
+            <DropDown />
+            <div className='nav-right'><Link to='/cart'>Cart</Link></div>
         </div>
     )
 }

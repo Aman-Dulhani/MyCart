@@ -15,10 +15,10 @@ const ItemList = (props) => {
                 </div>
 
                 <div className="card-content">
-                    <div className='add'><h4 className="card-title" onClick = {() => 
+                    <div className='add'><h2 className="card-title" onClick = {() => 
                         history.push({pathname:'/details',state: item })}>
                         {item.title}
-                    </h4><button className='fa-2x' onClick={() => props.addTo(item.id) }><FontAwesomeIcon icon={faShoppingCart}/>Add to Cart</button></div>
+                    </h2><button className='fa-2x' onClick={() => props.addTo(item.id) }><FontAwesomeIcon icon={faShoppingCart}/>Add to Cart</button></div>
                     <p>{item.desc}</p>
                     <p><b>Price: {item.price}$</b></p>
                 </div>
